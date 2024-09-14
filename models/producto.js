@@ -13,8 +13,12 @@ module.exports = class Producto {
       }
 
     save() {
-      
+      return db.execute(
+        'INSERT INTO productos (nombre, precio, urlImagen, descripcion) VALUES (?, ?, ?, ?)',
+        [this.nombre, this.precio, this.urlImagen, this.descripcion]
+      );
     }
+
     static deleteById(id) {
       
     }
