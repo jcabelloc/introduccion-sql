@@ -13,15 +13,6 @@ const db = require('./utils/database');
 const adminRoutes = require('./routes/admin');
 const tiendaRoutes = require('./routes/tienda');
 
-db.execute('SELECT * FROM productos')
-  .then(resultado => {
-    //console.log(resultado);
-    console.log(resultado[0], resultado[1]);
-  })
-  .catch(err => {
-    console.log(err);
-  });
-
 const app = express();
 
 
